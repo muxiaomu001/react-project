@@ -4,17 +4,17 @@
 
 import React, {Component} from 'react'
 
-class App extends Component{
+class Home extends Component{
     constructor(){
         super()
     }
     render(){
         return (
-            <div className="app">
-                {this.props.children}
+            <div className="home-page">
+                <h2>home page</h2>
             </div>
         )
     }
 }
 
-export default App;
+export default Home;

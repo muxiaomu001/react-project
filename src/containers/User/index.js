@@ -4,17 +4,17 @@
 
 import React, {Component} from 'react'
 
-class App extends Component{
+class User extends Component{
     constructor(){
         super()
     }
     render(){
         return (
-            <div className="app">
-                {this.props.children}
+            <div className="user-page">
+                <h2>User page</h2>
             </div>
         )
     }
 }
 
-export default App;
+export default User;

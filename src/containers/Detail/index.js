@@ -4,17 +4,17 @@
 
 import React, {Component} from 'react'
 
-class App extends Component{
+class Detail extends Component{
     constructor(){
         super()
     }
     render(){
         return (
-            <div className="app">
-                {this.props.children}
+            <div className="detail-page">
+                <h2>Detail page</h2>
             </div>
         )
     }
 }
 
-export default App;
+export default Detail;
