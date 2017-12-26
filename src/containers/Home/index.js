@@ -9,6 +9,8 @@ import * as userInfoActions from '../../store/actions/userInfo';
 
 import HomeHeader from '../../components/Homeheader'
 import Category from  '../../components/Category'
+import Ad from './subpage/Ad'
+import List from './subpage/List'
 
 class Home extends Component{
     constructor(){
@@ -22,6 +24,9 @@ class Home extends Component{
             <div className="home-page">
                 <HomeHeader cityName={this.props.userInfo.cityName} />
 	            <Category/>
+                <div style={{height:'15px'}}></div>
+                <Ad/>
+                <List cityName={this.props.userInfo.cityName}/>
             </div>
         )
     }

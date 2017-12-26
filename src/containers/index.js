@@ -23,7 +23,6 @@ class App extends Component{
         if(cityName==null){
             cityName = '北京';
         }
-
         setTimeout(()=>{
             this.setState({
                 initDone:true
@@ -34,11 +33,6 @@ class App extends Component{
 	    this.props.userInfoActions.login({
 		    cityName: cityName
 	    });
-
-	    console.log(this.props);
-	    setTimeout(()=>{
-		    console.log(this.props);
-	    },2000)
     }
     render(){
         return (
