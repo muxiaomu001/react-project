@@ -11,7 +11,7 @@ class HomeHeader extends Component{
 			<div id="home-header" className="clear-fix">
 				<div className="home-header-left float-left">
 					<Link to="/city">
-						<span>深圳</span>
+						<span>{this.props.cityName}</span>
 						&nbsp;
 						<i className="icon-angle-down"></i>
 					</Link>

@@ -3,8 +3,12 @@
  */
 
 import React, {Component} from 'react'
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as userInfoActions from '../../store/actions/userInfo';
 
 import HomeHeader from '../../components/Homeheader'
+import Category from  '../../components/Category'
 
 class Home extends Component{
     constructor(){
@@ -16,11 +20,22 @@ class Home extends Component{
     render(){
         return (
             <div className="home-page">
-                <HomeHeader/>
-                <h2>home page</h2>
+                <HomeHeader cityName={this.props.userInfo.cityName} />
+	            <Category/>
             </div>
         )
     }
 }
 
-export default Home;
+function mapStateToProps(state) {
+	return {
+		userInfo:state.userInfo
+	}
+}
+function mapDispatchToProps(dispath) {
+	return {}
+}
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(Home)
