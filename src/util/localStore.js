@@ -8,7 +8,7 @@ export default {
             value = localStorage.getItem(key)
         } catch (ex) {
             // 开发环境下提示error
-            if (__DEV__) {
+            if (process.env.NODE_ENV === 'development') {
                 console.error('localStorage.getItem报错, ', ex.message)
             }
         } finally {
@@ -21,7 +21,7 @@ export default {
             localStorage.setItem(key, value)
         } catch (ex) {
             // 开发环境下提示 error
-            if (__DEV__) {
+            if (process.env.NODE_ENV === 'development') {
                 console.error('localStorage.setItem报错, ', ex.message)
             }
         }

@@ -4,6 +4,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
+
 import App from '../containers/index';
 import Home from '../containers/Home';
 import NoFind from '../containers/404.js';
@@ -20,16 +21,19 @@ class RouterWrapper extends Component{
         return (
             <Router>
                 <App className="app-page">
-                    <Route exact path="/" component={Home} />
-                    <Route path="/404" component={NoFind} />
-                    <Route path="/city" component={City} />
-                    <Route path="/detail" component={Detail} />
-                    <Route path="/search" component={Search} />
-                    <Route path="/user" component={User} />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/city" component={City} />
+                        <Route path="/detail" component={Detail} />
+                        <Route path="/search" component={Search} />
+                        <Route path="/user" component={User} />
+                        <Route component={NoFind} />
+                    </Switch>
                 </App>
             </Router>
         )
     }
 }
+
 
 export default RouterWrapper;

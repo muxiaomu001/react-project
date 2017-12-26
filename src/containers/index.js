@@ -4,6 +4,10 @@
 
 import React, {Component} from 'react'
 
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import * as userInfoActions from '../store/actions/userInfo';
+
 import LocalStore from '../util/localStore';
 import {CITYNAME} from '../config/localStoreKey'
 
@@ -25,16 +29,42 @@ class App extends Component{
                 initDone:true
             })
         },1500)
+
+	    // 模拟登陆
+	    this.props.userInfoActions.login({
+		    cityName: cityName
+	    });
+
+	    console.log(this.props);
+	    setTimeout(()=>{
+		    console.log(this.props);
+	    },2000)
     }
     render(){
         return (
             <div className="app">
                 {
-                    this.state.initDone? this.props.children :<div>加载中...</div>
+                    this.state.initDone
+                        ? this.props.children
+                        :<div>加载中...</div>
                 }
             </div>
         )
     }
 }
 
-export default App;
+function mapStateToProps(state) {
+	return {
+		userInfo:state.userInfo
+	}
+}
+function mapDispatchToProps(dispath) {
+	return {
+		userInfoActions:bindActionCreators(userInfoActions,dispath)
+	}
+}
+
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(App)

@@ -4,13 +4,19 @@
 
 import React, {Component} from 'react'
 
+import HomeHeader from '../../components/Homeheader'
+
 class Home extends Component{
     constructor(){
-        super()
+        super();
+    }
+    componentDidMount(){
+        console.log(this.props)
     }
     render(){
         return (
             <div className="home-page">
+                <HomeHeader/>
                 <h2>home page</h2>
             </div>
         )
