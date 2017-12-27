@@ -3,18 +3,27 @@
  */
 
 import React, {Component} from 'react'
+import {withRouter} from 'react-router-dom'
+
+
+import Header from '../../components/Header'
+import Info from './subPage/Info'
 
 class Detail extends Component{
     constructor(){
         super()
     }
+    componentDidMount(){
+        console.log('page datail id '+this.props.match.params.id)
+    }
     render(){
         return (
-            <div className="detail-page">
-                <h2>Detail page</h2>
+            <div>
+                <Header  title="商户详情" type="share"/>
+                <Info id={this.props.match.params.id}/>
             </div>
         )
     }
 }
 
-export default Detail;
+export default withRouter(Detail);
