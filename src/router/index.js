@@ -12,6 +12,7 @@ import City from '../containers/City';
 import Detail from '../containers/Detail';
 import Search from '../containers/Search';
 import User from '../containers/User';
+import Login from '../containers/Login';
 
 class RouterWrapper extends Component{
     constructor(){
@@ -27,6 +28,7 @@ class RouterWrapper extends Component{
                         <Route path="/detail/:id" component={Detail} />
                         <Route path="/search/:category/:keyword?" component={Search} />
                         <Route path="/user" component={User} />
+                        <Route path="/login/:router?" component={Login} />
                         <Route component={NoFind} />
                     </Switch>
                 </App>

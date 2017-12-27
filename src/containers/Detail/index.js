@@ -8,6 +8,7 @@ import {withRouter} from 'react-router-dom'
 
 import Header from '../../components/Header'
 import Info from './subPage/Info'
+import Comment from './subPage/Comment'
 
 class Detail extends Component{
     constructor(){
@@ -21,6 +22,7 @@ class Detail extends Component{
             <div>
                 <Header  title="商户详情" type="share"/>
                 <Info id={this.props.match.params.id}/>
+                <Comment id={this.props.match.params.id}/>
             </div>
         )
     }
