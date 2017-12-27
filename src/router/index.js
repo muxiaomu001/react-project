@@ -25,7 +25,7 @@ class RouterWrapper extends Component{
                         <Route exact path="/" component={Home} />
                         <Route path="/city" component={City} />
                         <Route path="/detail" component={Detail} />
-                        <Route path="/search" component={Search} />
+                        <Route path="/search/:category/:keyword?" component={Search} />
                         <Route path="/user" component={User} />
                         <Route component={NoFind} />
                     </Switch>
