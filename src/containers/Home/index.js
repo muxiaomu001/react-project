@@ -4,8 +4,6 @@
 
 import React, {Component} from 'react'
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import * as userInfoActions from '../../store/actions/userInfo';
 
 import HomeHeader from '../../components/Homeheader'
 import Category from  '../../components/Category'

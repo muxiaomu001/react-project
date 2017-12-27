@@ -32,7 +32,8 @@ class Login extends Component{
         }
     }
     goUserPage(){
-        this.props.history.push('/user');
+        // this.props.history.push('/user');
+        this.props.history.push('/');
     }
     loginHandle(username){
        const actions = this.props.userInfoActions;
@@ -44,12 +45,15 @@ class Login extends Component{
         console.log(this.props.userInfo)
 
         //跳转
-        const router = this.props.match.params.router;
+        let router = this.props.match.params.router;
+        router =decodeURIComponent(router);
+        console.log(123,router)
         if(router){
             //跳转到指定页面
+            this.props.history.push(router);
         }else{
             //跳转到默认页面
-            this.props.history.push('/user');
+            this.props.history.push('/');
         }
     }
     render(){
