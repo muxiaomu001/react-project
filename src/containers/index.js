@@ -3,7 +3,7 @@
  */
 
 import React, {Component} from 'react'
-
+import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as userInfoActions from '../store/actions/userInfo';
@@ -30,7 +30,7 @@ class App extends Component{
         },1500)
 
 	    // 模拟登陆
-	    this.props.userInfoActions.login({
+	    this.props.userInfoActions.update({
 		    cityName: cityName
 	    });
     }
@@ -58,7 +58,11 @@ function mapDispatchToProps(dispath) {
 	}
 }
 
-export default connect(
-	mapStateToProps,
-	mapDispatchToProps
-)(App)
+
+// export default connect(
+// 	mapStateToProps,
+// 	mapDispatchToProps
+// )(App)
+
+//解决路由变了页面却没有变问题
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
