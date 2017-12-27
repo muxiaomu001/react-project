@@ -3,15 +3,21 @@
  */
 
 import React, {Component} from 'react'
+import SearchHeader from '../../components/SearchHeader'
+import SearchList from './subPage/List'
 
 class Search extends Component{
     constructor(){
         super()
     }
+    componentDidMount(){
+        console.log(this.props.match.params);
+    }
     render(){
         return (
             <div className="search-page">
-                <h2>Search page</h2>
+                <SearchHeader/>
+                <SearchList keyword={this.props.match.keyword} category={this.props.match.category}/>
             </div>
         )
     }

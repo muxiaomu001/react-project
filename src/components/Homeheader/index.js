@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import {Link } from 'react-router-dom'
+import SearchInput from '../SearchInput'
 import './style.less'
 
 class HomeHeader extends Component{
 	constructor(){
-		super()
+		super();
 	}
 	render(){
 		return (
@@ -22,7 +23,7 @@ class HomeHeader extends Component{
 				<div className="home-header-middle">
 					<div className="search-container">
 						<i className="icon-search"></i>
-						<input type="text" placeholder="请输入关键字"/>
+						<SearchInput/>
 					</div>
 				</div>
 			</div>
