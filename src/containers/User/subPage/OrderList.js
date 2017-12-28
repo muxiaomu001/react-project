@@ -28,11 +28,16 @@ class OrderList extends Component{
 			console.error('获取数据出错, ', ex.message)
 		})
 	}
+	//提交评价
+	submitComment(id,value,star,callback){
+		console.log(id,value,star,callback);
+		callback();
+	}
 	render(){
 		return (
 			<div className="order-list-container">
 				<h2>您的订单</h2>
-				<List data={this.state.list}/>
+				<List submitComment={this.submitComment.bind(this)} data={this.state.list}/>
 			</div>
 		)
 	}

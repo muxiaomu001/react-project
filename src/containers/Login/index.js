@@ -32,7 +32,7 @@ class Login extends Component{
         }
     }
     goUserPage(){
-        this.props.history.push('/user');
+        this.props.history.replace('/user');
     }
     loginHandle(username){
        const actions = this.props.userInfoActions;
