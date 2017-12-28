@@ -25,16 +25,16 @@ npm run build
     6、个人中心页
 ## 预览
 ### 首页
-![首页](https://github.com/huangwei9527/react-project/tree/master/doc/preview-img/home.gif)
+![首页](https://raw.githubusercontent.com/huangwei9527/react-project/master/doc/preview-img/home.gif)
 ### 城市页
-![城市页](https://github.com/huangwei9527/react-project/tree/master/doc/preview-img/city.gif)
+![城市页](https://raw.githubusercontent.com/huangwei9527/react-project/master/doc/preview-img/city.gif)
 ### 搜索列表页
-![搜索列表页](https://github.com/huangwei9527/react-project/tree/master/doc/preview-img/search.gif)
+![搜索列表页](https://raw.githubusercontent.com/huangwei9527/react-project/master/doc/preview-img/search.gif)
 ### 商品详情页
-![商品详情页](https://github.com/huangwei9527/react-project/tree/master/doc/preview-img/detail.gif)
+![商品详情页](https://raw.githubusercontent.com/huangwei9527/react-project/master/doc/preview-img/detail.gif)
 ### 登录页
-![登录页](https://github.com/huangwei9527/react-project/tree/master/doc/preview-img/login.gif)
+![登录页](https://raw.githubusercontent.com/huangwei9527/react-project/master/doc/preview-img/login.gif)
 ### 个人中心页
-![个人中心页](https://github.com/huangwei9527/react-project/tree/master/doc/preview-img/user.gif)
+![个人中心页](https://raw.githubusercontent.com/huangwei9527/react-project/master/doc/preview-img/user.gif)
     
 
